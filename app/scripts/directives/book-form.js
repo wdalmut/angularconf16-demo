@@ -7,8 +7,10 @@ angular.module("myApp")
       templateUrl: "views/book-form.html",
       restrict: "E",
       scope: {
-        "book": "=",
         "save": "=",
+      },
+      link: function(scope) {
+        scope.book = {};
       }
     };
   });

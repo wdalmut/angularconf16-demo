@@ -57,7 +57,6 @@ describe('Controller: MainCtrl', function () {
     httpBackend.whenPOST("http://localhost:8085/book").respond(Object.assign({}, book, {id: 1}));
     httpBackend.flush();
 
-    expect(scope.book).toEqual({});
     expect(scope.books.length).toBe(1);
 
     expect(scope.books[0].id).toBe(1);
